@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <h1 class="title">Список дел</h1>
+      <div class="task-section">
+        <div class="task-manager">
+          <form class="form" data-form>
+            <input
+              class="input"
+              type="text"
+              name="new-task"
+              placeholder="Новая задача..."
+              autocomplete="off"
+              required
+              data-newTaskInput
+            />
+            <button type="submit" class="button-create button form-button">Добавить</button>
+          </form>
+          <form class="form hidden" data-form data-action="editTask">
+            <input
+              class="input"
+              type="text"
+              name="edit-task"
+              autocomplete="off"
+              required
+              data-editTaskInput
+            />
+            <button type="submit" class="button-create button form-button">Изменить</button>
+          </form>
+          <button class="delete-all-button form-button">Удалить все</button>
+        </div>
+        <ul class="tasks" data-taskList></ul>
+      </div>
+    </div>
+  </body>
+</html>
