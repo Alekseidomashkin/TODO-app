@@ -7,7 +7,7 @@ export const createTaskItemHTML = function (element) {
       <div class="task-actions">
 
         <button class="button-edit button" data-taskbutton data-task="edit-btn">
-        <img src="./public/icons8-редактировать.svg" data-task="edit-btn" alt="" /></button>
+        <img src="https://img.icons8.com/?size=100&id=15049&format=png&color=FFFFFF" data-task="edit-btn" alt="" /></button>
         <button class="button-complete button" data-taskbutton data-task="check-btn">&#10004;</button>
         <button class="button-delete button" data-taskbutton data-task="delete-btn">&#10006;</button>
       </div>
