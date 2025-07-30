@@ -1,5 +1,4 @@
-export const deleteAllTasks = function (tasks) {
-  tasks = [];
+export const deleteAllTasks = function () {
   document.querySelector(".tasks").innerHTML = "";
   localStorage.removeItem("tasks");
 };

@@ -47,63 +47,73 @@ body {
   padding: 0.3rem 0;
 }
 .task-section {
+  width: 100%;
 }
 .task-manager {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  width: 100%;
 }
 .form {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-right: 0.75rem;
+  flex: 1;
+  position: relative;
 }
 
 .input {
   font-size: 1rem;
-  padding: 0.3rem 0.6rem;
+  padding: 0.35rem 0.65rem;
   color: var(--text-color);
   background-color: var(--card-background);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   outline: none;
-  height: 35px;
+  height: 37px;
+  flex: 1;
 }
 
 .form-button {
   border-radius: var(--border-radius);
   font-size: 1rem;
   color: var(--text-color);
-  padding: 0.3rem 0.6rem;
   outline: none;
   cursor: pointer;
-  height: 35px;
+  height: 37px;
   border: 1px solid;
+  padding-inline: 1.2rem;
 }
-form button {
-  background-color: (--accent-color);
-  border-color: (--accent-color);
+.button-create {
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
 }
 .delete-all-button {
   background-color: #ed213a;
   border-color: #ed213a;
 }
-
+.button-edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-edit img {
+  height: 22px;
+}
 .button {
   font-size: 1rem;
   color: var(--text-color);
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
   border-radius: var(--border-radius);
-  padding: 0.3rem 0.6rem;
+  padding: 0.35rem 0.65rem;
   outline: none;
   cursor: pointer;
-}
-
-.tasks {
 }
 
 .task {
@@ -116,6 +126,7 @@ form button {
   border-radius: var(--border-radius);
   background-color: var(--card-background);
   word-break: break-all;
+  width: 100%;
 }
 .task::before {
   content: "";
@@ -196,7 +207,11 @@ form button {
   transform: scale(1.1);
   border-radius: 0.5rem;
 }
-
+.button-edit:hover,
+.button-delete:hover,
+.button-complete:hover {
+  transform: scale(1.1);
+}
 .input:focus {
   border-color: var(--accent-color);
 }
@@ -211,4 +226,10 @@ form button {
 .button:disabled,
 .delete-all-button:disabled {
   cursor: not-allowed;
+}
+
+@media (min-width: 580px) {
+  .app {
+    width: 33rem;
+  }
 }
