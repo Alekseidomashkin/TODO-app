@@ -14,38 +14,46 @@
       <div class="task-section">
         <div class="task-manager">
           <form class="form" data-form data-create-task-form>
-            <label for="createTaskInput">
-              <input
-                class="input"
-                id="createTaskInput"
-                type="text"
-                name="new-task"
-                placeholder="Новая задача..."
-                autocomplete="off"
-                data-new-task-input
-              />
-            </label>
-            <button type="submit" class="button-create form-button" data-action="createTask">
+            <input
+              class="input"
+              type="text"
+              name="new-task"
+              placeholder="Новая задача..."
+              autocomplete="off"
+              data-new-task-input
+            />
+
+            <button
+              type="submit"
+              class="button-create form-button"
+              data-create-task-button
+              data-action="createTask"
+            >
               Добавить
             </button>
           </form>
           <!-- Форма для редактирования задачи -->
           <form class="form hidden" data-form data-edit-task-form>
-            <label for="editTaskInput">
-              <input
-                class="input"
-                id="editTaskInput"
-                type="text"
-                name="edit-task"
-                autocomplete="off"
-                data-edit-task-input
-              />
-            </label>
-            <button type="submit" class="button-create form-button" data-action="editTask">
+            <input
+              class="input"
+              type="text"
+              name="edit-task"
+              autocomplete="off"
+              data-edit-task-input
+            />
+
+            <button
+              type="submit"
+              class="button-create form-button"
+              data-edit-task-button
+              data-action="editTask"
+            >
               Изменить
             </button>
           </form>
-          <button class="delete-all-button form-button" data-delete-all-button>Удалить все</button>
+          <button class="delete-all-button form-button" data-delete-all-button>
+            Удалить все
+          </button>
         </div>
         <ul class="tasks" data-task-list></ul>
       </div>

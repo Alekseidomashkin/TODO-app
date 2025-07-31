@@ -7,8 +7,8 @@ export const selectors = {
   taskList: "[data-task-list]",
   editButtons: '[data-task="edit-btn"]',
   deleteButtons: '[data-task="delete-btn"]',
-  formEditButton: '[type="submit" data-action="editTask"]',
-  formEditButton: '[type="submit" data-action="createTask"]',
+  formEditButton: "[data-edit-task-button]",
+  formCreateButton: "[data-create-task-button]",
   currentTaskText: ".task-text",
   currentTask: 'li[data-task="item"]',
 };

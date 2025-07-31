@@ -39,6 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* width: 31rem; */
 }
 
 .title {
@@ -51,15 +52,12 @@ body {
 .task-manager {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 1rem;
-  width: 100%;
 }
 .form {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  flex: 1;
-  position: relative;
 }
 
 .input {
@@ -71,7 +69,6 @@ body {
   border-radius: var(--border-radius);
   outline: none;
   height: 37px;
-  flex: 1;
 }
 
 .form-button {
@@ -82,19 +79,19 @@ body {
   cursor: pointer;
   height: 37px;
   border: 1px solid;
-  padding-inline: 1.2rem;
+  padding-inline: 0.5rem;
 }
 .button-create {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  /* width: 6.875rem; */
 }
 .delete-all-button {
   background-color: #ed213a;
   border-color: #ed213a;
+  margin-left: 0.75rem;
+  /* width: 8.125rem; */
 }
 .button-edit {
   display: flex;
@@ -124,17 +121,7 @@ body {
   margin-bottom: 0.6rem;
   border-radius: var(--border-radius);
   background-color: var(--card-background);
-  word-break: break-all;
   width: 100%;
-}
-.task::before {
-  content: "";
-  position: absolute;
-
-  background: linear-gradient(0deg, transparent, transparent 30%, rgba(0, 255, 255, 0.3));
-  transform: rotate(-45deg);
-  transition: all 0.5s ease;
-  opacity: 0;
 }
 
 .task--completed {
@@ -148,16 +135,6 @@ body {
   position: relative;
 }
 
-.task--completed .task-text::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  left: 0;
-  top: 50%;
-}
-
 .task:last-child {
   margin-bottom: 0;
 }
@@ -168,7 +145,9 @@ body {
 .button-edit {
   margin-right: 10px;
 }
-
+.task-text {
+  word-break: break-all;
+}
 .task-actions {
   display: flex;
   gap: 0.5rem;
@@ -208,10 +187,6 @@ body {
     box-shadow: 0 0 15px #9a7bca;
     border-radius: 0.7rem;
   }
-  .task:hover::before {
-    opacity: 1;
-    transform: rotate(-45deg) translateY(100%);
-  }
   .task--completed:hover {
     transform: none;
     border-radius: var(--border-radius);
@@ -225,5 +200,52 @@ body {
   .button-delete:hover,
   .button-complete:hover {
     transform: scale(1.1);
+  }
+}
+
+@media (max-width: 515px) {
+  .app {
+    width: 82vw;
+  }
+  input {
+    width: 40vw;
+  }
+  .delete-all-button {
+    flex: 1;
+  }
+}
+@media (max-width: 489px) {
+  .delete-all-button {
+    flex: none;
+    margin-left: 2vw;
+  }
+  .button-create {
+    margin-left: 2vw;
+  }
+  input {
+    margin: 0;
+  }
+  .form-button {
+    width: 19vw;
+  }
+}
+@media (max-width: 390px) {
+  .form-button {
+    width: 11vw;
+  }
+  input {
+    width: 56vw;
+  }
+  .task-actions button {
+    width: 1.9rem;
+    height: 1.9rem;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .task-actions button img {
+    width: 1.32rem;
+    height: 1.32rem;
   }
 }
