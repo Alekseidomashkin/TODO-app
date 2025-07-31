@@ -1,7 +1,10 @@
+import { selectors } from "./selectors";
 export const blockingButtons = function () {
-  const deleteAllTasksButtonElement = document.querySelector(".delete-all-button");
-  const deleteTaskButtonsElements = document.querySelectorAll('[data-task="delete-btn"]');
-  const editButtonsElements = document.querySelectorAll('[data-task="edit-btn"]');
+  const deleteAllTasksButtonElement = document.querySelector(selectors.deleteAll);
+  const deleteTaskButtonsElements = document.querySelectorAll(selectors.deleteButtons);
+  const editButtonsElements = document.querySelectorAll(selectors.editButtons);
+  console.log(editButtonsElements);
+  console.log(deleteTaskButtonsElements);
   editButtonsElements.forEach((btn) => {
     btn.setAttribute("disabled", "");
   });

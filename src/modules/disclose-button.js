@@ -1,11 +1,12 @@
+import { selectors } from "./selectors";
 export const discloseButtons = function () {
-  const deleteAllTasksButtonElement = document.querySelector(".delete-all-button");
-  const deleteTaskButtonsElements = document.querySelectorAll('[data-task="delete-btn"]');
-  const editButtonsElements = document.querySelectorAll('[data-task="edit-btn"]');
+  const deleteAllTasksButtonElement = document.querySelector(selectors.deleteAll);
+  const deleteTaskButtonsElements = document.querySelectorAll(selectors.deleteButtons);
+  const editTaskButtonsElements = document.querySelectorAll(selectors.editButtons);
   deleteTaskButtonsElements.forEach((btn) => {
     btn.removeAttribute("disabled");
   });
-  editButtonsElements.forEach((btn) => {
+  editTaskButtonsElements.forEach((btn) => {
     btn.removeAttribute("disabled");
   });
   deleteAllTasksButtonElement.removeAttribute("disabled");

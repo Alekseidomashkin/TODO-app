@@ -31,7 +31,6 @@ ul {
 body {
   padding: 1rem;
   margin: 0;
-  min-width: 360px;
   display: flex;
   justify-content: center;
 }
@@ -87,7 +86,7 @@ body {
 }
 .button-create {
   background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +104,7 @@ body {
 .button-edit img {
   height: 22px;
 }
-.button {
+.task-button {
   font-size: 1rem;
   color: var(--text-color);
   background-color: var(--accent-color);
@@ -138,27 +137,12 @@ body {
   opacity: 0;
 }
 
-.task:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #9a7bca;
-  border-radius: 0.7rem;
-}
-
-.task:hover::before {
-  opacity: 1;
-  transform: rotate(-45deg) translateY(100%);
-}
-
 .task--completed {
   background-color: rgba(47, 45, 45, 0.35);
   position: relative;
   border: 1px solid #373535;
 }
 
-.task--completed:hover {
-  transform: none;
-  border-radius: var(--border-radius);
-}
 .task--completed .task-text {
   opacity: 0.45;
   position: relative;
@@ -202,16 +186,7 @@ body {
 .form-button {
   transition: all 0.2s ease;
 }
-.form-button:hover,
-.delete-all-button:hover {
-  transform: scale(1.1);
-  border-radius: 0.5rem;
-}
-.button-edit:hover,
-.button-delete:hover,
-.button-complete:hover {
-  transform: scale(1.1);
-}
+
 .input:focus {
   border-color: var(--accent-color);
 }
@@ -223,13 +198,32 @@ body {
   outline: 1px solid var(--accent-color);
   outline-offset: 2px;
 }
-.button:disabled,
+.task-button:disabled,
 .delete-all-button:disabled {
   cursor: not-allowed;
 }
-
-@media (min-width: 580px) {
-  .app {
-    width: 33rem;
+@media (any-hover: hover) {
+  .task:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #9a7bca;
+    border-radius: 0.7rem;
+  }
+  .task:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+  }
+  .task--completed:hover {
+    transform: none;
+    border-radius: var(--border-radius);
+  }
+  .form-button:hover,
+  .delete-all-button:hover {
+    transform: scale(1.1);
+    border-radius: 0.5rem;
+  }
+  .button-edit:hover,
+  .button-delete:hover,
+  .button-complete:hover {
+    transform: scale(1.1);
   }
 }

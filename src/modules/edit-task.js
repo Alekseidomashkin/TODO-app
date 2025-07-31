@@ -1,9 +1,11 @@
+import { saveToLocalStorage } from "./save-to-local-storage";
+import { selectors } from "./selectors";
 import { blockingButtons } from "./blocking-buttons";
 import { discloseButtons } from "./disclose-button";
 export const prepareToEditTask = function (currentTaskId, tasks, currentTaskElement) {
-  const formCreateTaskElement = document.querySelector("[data-form]");
-  const formEditTaskElement = document.querySelector('[data-action="editTask"]');
-  const inputEditTaskElement = document.querySelector("[data-editTaskInput]");
+  const formCreateTaskElement = document.querySelector(selectors.formCreate);
+  const formEditTaskElement = document.querySelector(selectors.formEdit);
+  const inputEditTaskElement = document.querySelector(selectors.inputEdit);
 
   inputEditTaskElement.value = currentTaskElement.innerText;
   inputEditTaskElement.focus();
@@ -20,7 +22,7 @@ export const prepareToEditTask = function (currentTaskId, tasks, currentTaskElem
     inputEditTaskElement.value = "";
 
     tasks.find((task) => task.id == currentTaskId).title = currentTaskElement.innerText;
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    saveToLocalStorage(tasks);
 
     formCreateTaskElement.classList.remove("hidden");
     formEditTaskElement.classList.add("hidden");
