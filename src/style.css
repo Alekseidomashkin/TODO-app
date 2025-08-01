@@ -202,10 +202,10 @@ body {
 /* адаптив */
 @media (min-width: 515px) {
   .task-manager {
-    width: 470px;
+    width: 471px;
   }
   .task {
-    width: 470px;
+    width: 471px;
   }
   .button-edit {
     margin-left: 7px;
