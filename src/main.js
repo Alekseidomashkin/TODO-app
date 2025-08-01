@@ -3,7 +3,7 @@ import { createTaskItemHTML } from "./modules/create-task-Item";
 import { createTask } from "./modules/create-task";
 import { deleteAllTasks } from "./modules/delete-all-tasks";
 import { renderTasks } from "./modules/render-tasks";
-import { changeButtonsText } from "./modules/change-buttons-text";
+import { adaptive } from "./modules/change-buttons-text";
 import { changeMovesAfterClickTaskList } from "./modules/change-moves-after-click-taskList";
 
 const formCreateTaskElement = document.querySelector(selectors.formCreate);
@@ -40,5 +40,5 @@ deleteAllTasksButtonElement.addEventListener("click", () => {
   deleteAllTasks(tasks);
 });
 
-window.addEventListener("load", changeButtonsText);
-window.addEventListener("resize", changeButtonsText);
+window.addEventListener("load", adaptive);
+window.addEventListener("resize", adaptive);

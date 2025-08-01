@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+button:focus-visible {
+  outline: 3px dashed orange;
+  outline-offset: 1px;
+  transition-duration: 0s !important;
+}
 
 :root {
   --background-color: #1a1a1a;
