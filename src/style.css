@@ -56,7 +56,7 @@ body {
 .task-manager {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 1rem;
   /* width: 100%; */
 }
@@ -206,17 +206,32 @@ body {
 }
 /* адаптив */
 @media (min-width: 515px) {
-  .task-manager {
-    width: 471px;
+  .input {
+    width: 216.8px;
   }
+  .task-manager,
   .task {
-    width: 471px;
+    width: 470.2px;
+  }
+  .button-create {
+    width: 105px;
+  }
+  .delete-all-button {
+    width: 124.4px;
   }
   .button-edit {
     margin-left: 7px;
   }
+  .input {
+    width: 216.8px;
+  }
 }
 @media (max-width: 515px) {
+  .button-create,
+  .delete-all-button {
+    width: auto;
+  }
+
   .task-text {
     font-size: 0.75rem;
   }
