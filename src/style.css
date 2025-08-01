@@ -45,12 +45,15 @@ body {
   font-size: 1.8rem;
   padding: 0.3rem 0;
 }
-
+/* .task-section {
+  width: 100%;
+} */
 .task-manager {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  /* width: 100%; */
 }
 .form {
   display: flex;
@@ -77,6 +80,9 @@ body {
   height: 37px;
   border: 1px solid;
   padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .button-create {
   background-color: var(--accent-color);
@@ -141,7 +147,7 @@ body {
   margin-right: 10px;
 }
 .task-text {
-  max-width: 75%;
+  flex: 1;
   word-break: break-all;
 }
 .task-actions {
@@ -201,22 +207,28 @@ body {
   .task {
     width: 470px;
   }
+  .button-edit {
+    margin-left: 7px;
+  }
 }
 @media (max-width: 515px) {
+  .task-text {
+    font-size: 0.75rem;
+  }
+  .app,
+  .task-section,
+  .task-manager,
   .task {
-    width: auto;
-  }
-  .task-manager {
-    width: auto;
-  }
-  .app {
     width: 82vw;
   }
   input {
-    width: 40vw;
+    width: 39vw;
   }
   .delete-all-button {
     flex: 1;
+  }
+  .form-button {
+    padding-inline: 0.5rem;
   }
 }
 @media (max-width: 489px) {
@@ -234,7 +246,10 @@ body {
     width: 19vw;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 450px) {
+  .button-edit {
+    margin-right: 0;
+  }
   .form-button {
     width: 11vw;
   }
