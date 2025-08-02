@@ -220,7 +220,7 @@ body {
 }
 
 /* адаптив */
-@media (min-width > 515px) {
+@media (width >= 515px) {
   .input {
     width: 216.8px;
   }
@@ -241,9 +241,13 @@ body {
   .button-edit {
     margin-left: 7px;
   }
+
+  .input {
+    width: 216.8px;
+  }
 }
 
-@media (max-width < 515px) {
+@media (width <= 515px) {
   .button-create,
   .delete-all-button {
     width: auto;
@@ -273,7 +277,7 @@ body {
   }
 }
 
-@media (max-width < 489px) {
+@media (width <= 489px) {
   .delete-all-button {
     flex: none;
     margin-left: 2vw;
@@ -292,7 +296,7 @@ body {
   }
 }
 
-@media (max-width < 450px) {
+@media (width <= 450px) {
   .button-edit {
     margin-right: 0;
   }
