@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 button:focus-visible {
   outline: 3px dashed orange;
   outline-offset: 1px;
@@ -10,7 +11,7 @@ button:focus-visible {
   --card-background: #373535;
   --text-color: #f6f0f0;
   --accent-color: #9a7bca;
-  --border-color: #444444;
+  --border-color: #444;
   --border-radius: 0.2rem;
 }
 
@@ -50,16 +51,14 @@ body {
   font-size: 1.8rem;
   padding: 0.3rem 0;
 }
-/* .task-section {
-  width: 100%;
-} */
+
 .task-manager {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
-  /* width: 100%; */
 }
+
 .form {
   display: flex;
   align-items: center;
@@ -89,24 +88,29 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .button-create {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   margin-left: 0.75rem;
 }
+
 .delete-all-button {
   background-color: #ed213a;
   border-color: #ed213a;
   margin-left: 0.75rem;
 }
+
 .button-edit {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .button-edit img {
   height: 22px;
 }
+
 .task-button {
   font-size: 1rem;
   color: var(--text-color);
@@ -131,7 +135,7 @@ body {
 }
 
 .task--completed {
-  background-color: rgba(47, 45, 45, 0.35);
+  background-color: rgb(47 45 45 / 35%);
   position: relative;
   border: 1px solid #373535;
 }
@@ -148,21 +152,26 @@ body {
 .task--completed .task-text {
   text-decoration: line-through;
 }
+
 .button-edit {
   margin-right: 10px;
 }
+
 .task-text {
   flex: 1;
   word-break: break-all;
 }
+
 .task-actions {
   display: flex;
   gap: 0.5rem;
 }
+
 .task-actions button {
   height: 2.3rem;
   width: 2.3rem;
 }
+
 .hidden {
   display: none;
 }
@@ -175,6 +184,7 @@ body {
 .delete-all-button:disabled {
   cursor: not-allowed;
 }
+
 @media (any-hover: hover) {
   .input:hover {
     border-color: var(--accent-color);
@@ -184,49 +194,56 @@ body {
   .form-button {
     transition: all 0.2s ease;
   }
+
   .task:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px #9a7bca;
     border-radius: 0.7rem;
   }
+
   .task--completed:hover {
     transform: none;
     border-radius: var(--border-radius);
   }
+
   .form-button:hover,
   .delete-all-button:hover {
     transform: scale(1.1);
     border-radius: 0.5rem;
   }
+
   .button-edit:hover,
   .button-delete:hover,
   .button-complete:hover {
     transform: scale(1.1);
   }
 }
+
 /* адаптив */
-@media (min-width: 515px) {
+@media (min-width > 515px) {
   .input {
     width: 216.8px;
   }
+
   .task-manager,
   .task {
     width: 470.2px;
   }
+
   .button-create {
     width: 105px;
   }
+
   .delete-all-button {
     width: 124.4px;
   }
+
   .button-edit {
     margin-left: 7px;
   }
-  .input {
-    width: 216.8px;
-  }
 }
-@media (max-width: 515px) {
+
+@media (max-width < 515px) {
   .button-create,
   .delete-all-button {
     width: auto;
@@ -235,47 +252,59 @@ body {
   .task-text {
     font-size: 0.75rem;
   }
+
   .app,
   .task-section,
   .task-manager,
   .task {
     width: 82vw;
   }
+
   input {
     width: 39vw;
   }
+
   .delete-all-button {
     flex: 1;
   }
+
   .form-button {
     padding-inline: 0.5rem;
   }
 }
-@media (max-width: 489px) {
+
+@media (max-width < 489px) {
   .delete-all-button {
     flex: none;
     margin-left: 2vw;
   }
+
   .button-create {
     margin-left: 2vw;
   }
+
   input {
     margin: 0;
   }
+
   .form-button {
     width: 19vw;
   }
 }
-@media (max-width: 450px) {
+
+@media (max-width < 450px) {
   .button-edit {
     margin-right: 0;
   }
+
   .form-button {
     width: 11vw;
   }
+
   input {
     width: 56vw;
   }
+
   .task-actions button {
     width: 1.9rem;
     height: 1.9rem;
@@ -284,6 +313,7 @@ body {
     align-items: center;
     justify-content: center;
   }
+
   .task-actions button img {
     width: 1.32rem;
     height: 1.32rem;

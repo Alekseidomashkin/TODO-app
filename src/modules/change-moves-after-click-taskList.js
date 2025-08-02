@@ -9,7 +9,9 @@ export const changeMovesAfterClickTaskList = function (event, tasks) {
   const currentTaskText = currentTaskElement.querySelector(selectors.currentTaskText);
   const currentTaskId = currentTaskElement.dataset.id;
   const datasetValue = event.target.dataset.task;
-  if (!currentTaskElement) return;
+  if (!currentTaskElement) {
+    return;
+  }
   switch (datasetValue) {
     case "complete-btn":
       completeTask(tasks, currentTaskId);

@@ -6,6 +6,7 @@ export const prepareToEditTask = function (currentTaskId, tasks, currentTaskElem
   const formCreateTaskElement = document.querySelector(selectors.formCreate);
   const formEditTaskElement = document.querySelector(selectors.formEdit);
   const inputEditTaskElement = document.querySelector(selectors.inputEdit);
+  
 
   inputEditTaskElement.value = currentTaskElement.innerText;
   inputEditTaskElement.focus();
@@ -21,7 +22,7 @@ export const prepareToEditTask = function (currentTaskId, tasks, currentTaskElem
     currentTaskElement.innerText = editTaskText;
     inputEditTaskElement.value = "";
 
-    tasks.find((task) => task.id == currentTaskId).title = currentTaskElement.innerText;
+    tasks.find((task) => task.id === currentTaskId).title = currentTaskElement.innerText;
     saveToLocalStorage(tasks);
 
     formCreateTaskElement.classList.remove("hidden");
